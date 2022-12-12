@@ -3285,7 +3285,7 @@ void SingleFieldMPM::interpolateToParticlesAndUpdate(const ProcessorGroup*,
 #endif
 #if 1
     // For the brazil test
-    RIGID_VEL = Vector(0.,-2.0e-5,0.);
+    RIGID_VEL = Vector(0.,-0.06,0.);
 #endif
 #if 0
     // For twoDisksAndPlate2M problem
