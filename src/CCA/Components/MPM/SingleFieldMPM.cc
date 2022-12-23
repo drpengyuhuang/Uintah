@@ -3283,7 +3283,7 @@ void SingleFieldMPM::interpolateToParticlesAndUpdate(const ProcessorGroup*,
       RIGID_VEL = Vector(0.,0., 2.0);
     }
 #endif
-#if 1
+#if 0
     // For the brazil test
     RIGID_VEL = Vector(0.,-0.06,0.);
 #endif
