@@ -103,7 +103,7 @@ SingleFieldMPM::SingleFieldMPM( const ProcessorGroup* myworld,
 
   d_nextOutputTime=0.;
   d_SMALL_NUM_MPM=1e-200;
-  contactModel        = 0;
+  contactModel        = 0; //PH: why use 0 instead of nullptr in serialMPM?
   thermalContactModel = 0;
   heatConductionModel = 0;
   NGP     = 1;
