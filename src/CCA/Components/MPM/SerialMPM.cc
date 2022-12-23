@@ -86,10 +86,10 @@
 #include <fstream>
 #include <cmath>
 
-using namespace Uintah;
-using namespace std;
+using namespace Uintah; //PH: take everything that's in the Uintah namespace and dump it in the global namespace
+using namespace std;    //PH: similar for std; std = c++ standard library
 
-static DebugStream cout_doing("MPM", false);
+static DebugStream cout_doing("MPM", false);  //PH: DebugStream is an ostream that is useful for outputting debug messages.
 static DebugStream cout_dbg("SerialMPM", false);
 static DebugStream cout_convert("MPMConv", false);
 static DebugStream cout_heat("MPMHeat", false);
