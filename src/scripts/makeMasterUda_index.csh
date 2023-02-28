@@ -34,6 +34,16 @@ if ( $status ) then
   exit
 endif
 
+if( ! -e $masterUda ) then
+  echo "ERROR: makeMasterUda.csh: can't find the directory (masterUda)"
+  echo " Create the directory and try again."
+  exit
+endif
+
+if( ! -e $masterUda ) then
+  echo "ERROR: makeMasterUda: can't find the directory (masterUda)"
+  exit
+endif
 
 echo ""
 echo "---------------------------------------"
@@ -108,6 +118,20 @@ while ( $c != $n)
   @ c  = $c + 1
   @ cc = $cc + 1
 end
+
+#__________________________________
+#  copy uda[1]/input.xml* to masterUda
+echo ""
+echo "__________________________________"
+echo "Copying $udas[1]/input.xml and input.xml.orig to $masterUda"
+ 
+if( ! -e $masterUda/input.xml ) then
+  cp $udas[1]/input.xml $masterUda
+endif
+
+if( ! -e $masterUda/input.xml.orig ) then
+  cp $udas[1]/input.xml.orig $masterUda
+endif
 
 #__________________________________
 # copy the index.xml file from uda[1]
